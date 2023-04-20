@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+:root{
+
+}
+
+
+/*******************************************************************************/
+/* header */
+.header{
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.logoContnet{
+    display: flex;
+    gap: 5px;
+    transition: color 0.2s;
+}
+.logoContnet{
+    text-decoration: none;
+    color: rgb(77, 41, 41);
+}
+.logoContnet h1:hover{  
+    border-bottom: 1px solid black;
+}
+#logo{
+    max-width:60px;
+    height: auto;
+}
+
+.nav a{
+  text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.2s ease , font-size 0.2s ease;
+}
+.nav a:hover{
+    font-size: 26px;
+    color: brown;
+    border-bottom: 1px solid black;
+}
+.nav a:active{
+   color: green;
+}
+
+#note{
+    color: red;
+}
+
+
+/*******************************************************************************/
+/* main */
+/* section about */
+
+.overlay{  
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0
+}
+#About{
+    background-image: url('./images/bg4.jpg');   
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.bgContent{
+    position: absolute;
+    top : 50%;
+    left :50%;
+    transform: translate(-50% , -50%);
+    color: white;
+    text-align: center;
+    animation-name:fromLeft ;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    background-color: rgba(187, 207, 147 , 0.2); 
+    padding: 0 30px;   
+}
+.bgContent p{
+  font-size: 20px; 
+}
+.bgContent h3{
+  font-size: 30px; 
+}
+@keyframes fromLeft {
+    from{     
+      margin-left: -150px;
+    }
+    to{    
+      margin-left: 0;
+    }
+}
+
+/*******************************************************************************/
+/* section Books */
+#Books{
+    padding: 30px 30px;
+    /* background-color: aquamarine; */
+    text-align: center;
+}
+.search-area{  
+     /* background-color: yellow; */
+}
+.search{
+    background-color: white;    
+}
+.filter{
+    text-align: right;
+}
+input[type="search"]{
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #ddd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.books{
+   margin-top: 10px;
+   /* background-color: aqua; */
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr) );
+   gap: 20px;
+}
+.card{
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #ddd;
+}
+.card img{
+    border-radius: 5px;
+  width: 100%;
+}
+/*******************************************************************************/
+/* section contact */
+#contact{
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    row-gap: 10px;
+    padding: 30px 20px;
+    justify-content: center;
+    
+}
+#contact label,input[type="submit"]{
+    display: block;
+    margin: 10px 0;
+}
+.contact-content{   
+   text-align: left;
+}
+.contact-content h3{
+    font-size: 30px;
+}
+.contact-content p{
+    font-size: 20px;
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+.contact-message{
+    font-size: 25px;       
+}
+input[type="text"]{
+    width: 80%;
+    height: 40px;
+    border: none;
+}
+.btn{
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(103, 170, 103);
+    color: white;
+    border-radius: 10px;
+    transition:background-color 0.2s ease-in-out, font-size 0.2s ease-in-out;   
+}
+.btn:hover{
+    background-color : rgb(99, 193, 99);
+    font-size: 19px; 
+}
+textarea{
+    border: none;
+}
+
+/*******************************************************************************/
+/* footer */
+.footer{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background-color: rgb(134, 172, 134);
+    color : white;
+    height: 100px;
+    padding: 20px;
+}
